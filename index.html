@@ -12,7 +12,7 @@
 <meta property="og:title" content="Poetry and the distance">
 <meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;index.html">
 <meta property="og:site_name" content="Poetry and the distance">
-<meta property="og:locale" content="Yu-Yang">
+<meta property="og:locale" content="zh-CN">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Poetry and the distance" type="application/atom+xml">
@@ -56,7 +56,7 @@
 			
 				<li><a href="/">主页</a></li>
 	        
-				<li><a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
+				<li><a href="/123">随笔</a></li>
 	        
 			</ul>
 		</nav>
@@ -138,7 +138,7 @@
 				
 					<li style="width: 50%"><a href="/">主页</a></li>
 		        
-					<li style="width: 50%"><a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
+					<li style="width: 50%"><a href="/123">随笔</a></li>
 		        
 				</ul>
 			</nav>
@@ -154,6 +154,70 @@
           </div>
           <div id="js-content" class="content-ll">
             
+  
+    <article id="post-Vue基础知识点" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/11/14/Vue%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%82%B9/">Vue基础知识点</a>
+    </h1>
+  
+
+        
+        <a href="/2019/11/14/Vue%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%82%B9/" class="archive-article-date">
+  	<time datetime="2019-11-14T07:39:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-14</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Vue基础知识点"><a href="#Vue基础知识点" class="headerlink" title="Vue基础知识点"></a>Vue基础知识点</h1><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line">1、双花括号</span><br><span class="line">    mustache(胡子)/interpolation（插值表达式）</span><br><span class="line"></span><br><span class="line">    语法：</span><br><span class="line">    <span class="tag">&lt;<span class="name">any</span>&gt;</span>&#123;&#123;表达式&#125;&#125;<span class="tag">&lt;/<span class="name">any</span>&gt;</span></span><br><span class="line">    作用：</span><br><span class="line">    将表达式执行的结果 输出当调用元素的innerHTML中；还可以将数据绑定到视图</span><br><span class="line"></span><br><span class="line">    </span><br><span class="line"></span><br><span class="line">2、指令-循环指令</span><br><span class="line">    基本语法1：</span><br><span class="line">    <span class="tag">&lt;<span class="name">any</span> <span class="attr">v-for</span>=<span class="string">"tmp in array"</span>&gt;</span><span class="tag">&lt;/<span class="name">any</span>&gt;</span></span><br><span class="line">    基本语法2：</span><br><span class="line">    <span class="tag">&lt;<span class="name">any</span> <span class="attr">v-for</span>=<span class="string">"(value,index) in array"</span>&gt;</span><span class="tag">&lt;/<span class="name">any</span>&gt;</span></span><br><span class="line">    </span><br><span class="line">    作用：</span><br><span class="line">    在遍历array这个集合时，将临时变量保存在tmp中，创建多个any标签</span><br><span class="line"></span><br><span class="line">3、指令-选择指令</span><br><span class="line">    语法：</span><br><span class="line">      <span class="tag">&lt;<span class="name">any</span> <span class="attr">v-if</span>=<span class="string">"表达式"</span>&gt;</span><span class="tag">&lt;/<span class="name">any</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">any</span> <span class="attr">v-else-if</span>=<span class="string">"表达式"</span>&gt;</span><span class="tag">&lt;/<span class="name">any</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">any</span> <span class="attr">v-else</span>=<span class="string">"表达式"</span>&gt;</span><span class="tag">&lt;/<span class="name">any</span>&gt;</span></span><br><span class="line">    作用：</span><br><span class="line">      根据表达式执行结果的真假，来决定是否要将当前的这个元素 挂载到DOM树</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">4、指令-事件绑定</span><br><span class="line">    语法：</span><br><span class="line">        <span class="tag">&lt;<span class="name">any</span> <span class="attr">v-on:eventName</span>=<span class="string">"handleEvent"</span>&gt;</span><span class="tag">&lt;/<span class="name">any</span>&gt;</span></span><br><span class="line">    作用：</span><br><span class="line">        给指定的元素 将handleEvent的方法绑定给指定eventName事件</span><br><span class="line">    </span><br><span class="line"></span><br><span class="line">5、指令-属性绑定</span><br><span class="line">  基本语法：</span><br><span class="line">    <span class="tag">&lt;<span class="name">any</span> <span class="attr">v-bind:myProp</span>=<span class="string">"表达式"</span>&gt;</span><span class="tag">&lt;/<span class="name">any</span>&gt;</span></span><br><span class="line">    补充，支持简写：</span><br><span class="line">    <span class="tag">&lt;<span class="name">any</span> <span class="attr">:myProp</span>=<span class="string">"表达式"</span>&gt;</span><span class="tag">&lt;/<span class="name">any</span>&gt;</span></span><br><span class="line">  作用：</span><br><span class="line">    将表达式执行的结果 绑定 到当前元素的myProp属性</span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">img</span> <span class="attr">v-bind:src</span>=<span class="string">"'img/'+myImg"</span> <span class="attr">alt</span>=<span class="string">""</span>&gt;</span></span><br><span class="line">   动态样式绑定</span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span> <span class="attr">:style</span>=<span class="string">"&#123;backgroundColor:myBGColor&#125;"</span>&gt;</span>动态样式绑定<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"></span><br><span class="line">   动态样式类绑定</span><br><span class="line">      <span class="tag">&lt;<span class="name">h1</span> <span class="attr">:class</span>=<span class="string">"&#123;myRed:false&#125;"</span>&gt;</span>动态样式类的绑定<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"></span><br><span class="line">6、指令-双向数据绑定</span><br><span class="line">    方向1：数据绑定到视图</span><br><span class="line">    方向2：将视图中（表单元素）用户操作的结果绑定到数据</span><br><span class="line"></span><br><span class="line">    基本语法:</span><br><span class="line">      <span class="tag">&lt;<span class="name">表单元素</span> <span class="attr">v-model</span>=<span class="string">"变量"</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">表单元素</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/11/14/Vue%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%82%B9/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
   
     <article id="post-HTML结构性定义" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
@@ -1088,6 +1152,7 @@
     </div>
   </div>
 </footer>
+
     </div>
     <script>
 	var yiliaConfig = {
