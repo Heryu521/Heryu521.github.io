@@ -6,13 +6,16 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2019 | Poetry and the distance</title>
+  <title>EL+JSTL简单的介绍及使用 | Poetry and the distance</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Poetry and the distance">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;archives&#x2F;2019&#x2F;index.html">
+  <meta name="description" content="EL+JSTL1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283 EL达式是什么?sun制订的一种用于计算的一种规则，早期只能用于给标签">
+<meta property="og:type" content="article">
+<meta property="og:title" content="EL+JSTL简单的介绍及使用">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;22&#x2F;EL-JSTL%E7%AE%80%E5%8D%95%E7%9A%84%E4%BB%8B%E7%BB%8D%E5%8F%8A%E4%BD%BF%E7%94%A8&#x2F;index.html">
 <meta property="og:site_name" content="Poetry and the distance">
+<meta property="og:description" content="EL+JSTL1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283 EL达式是什么?sun制订的一种用于计算的一种规则，早期只能用于给标签">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-11-22T07:37:10.775Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Poetry and the distance" type="application/atom+xml">
@@ -153,346 +156,197 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-EL-JSTL简单的介绍及使用" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      EL+JSTL简单的介绍及使用
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/11/22/EL-JSTL%E7%AE%80%E5%8D%95%E7%9A%84%E4%BB%8B%E7%BB%8D%E5%8F%8A%E4%BD%BF%E7%94%A8/" class="archive-article-date">
+
+        
+        <a href="/2019/11/22/EL-JSTL%E7%AE%80%E5%8D%95%E7%9A%84%E4%BB%8B%E7%BB%8D%E5%8F%8A%E4%BD%BF%E7%94%A8/" class="archive-article-date">
   	<time datetime="2019-11-22T07:32:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-22</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/11/22/EL-JSTL%E7%AE%80%E5%8D%95%E7%9A%84%E4%BB%8B%E7%BB%8D%E5%8F%8A%E4%BD%BF%E7%94%A8/">EL+JSTL简单的介绍及使用</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="EL-JSTL"><a href="#EL-JSTL" class="headerlink" title="EL+JSTL"></a>EL+JSTL</h1><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br></pre></td><td class="code"><pre><span class="line"> EL达式是什么?</span><br><span class="line">sun制订的一种用于计算的一种规则，早期只能用于给标签的属性赋值，现在也可以直接输出。</span><br><span class="line">) 第一种： 访问bean的属性</span><br><span class="line">a. $&#123;user.name&#125;:</span><br><span class="line">jsp引擎会依次从pageContext、request、session、application查找绑订名为“user” 的对象，如果找到了，就不再向下查找，否则，继续向下查找。 找到后，调用该对象的getName()，并输出其值；找不到，则输出""（空）。</span><br><span class="line">b. 或者也可以使用$&#123;user["name"]&#125;，效果相同</span><br><span class="line">"name" 表示字符串</span><br><span class="line">c. 或者是$&#123;user[propname]&#125;，注意propname没有引号，表示变量</span><br><span class="line">d. 此外，[ ]里面还可以是0,1..这样的下标，作用是输出数组里的元素值。</span><br><span class="line">e. 可以使用pageScope,requestScope,sessionScope,applicationScope四个关键字指定查找的范围。</span><br><span class="line">f. $&#123;requestScope.user.name&#125;只到request中去找，不再依次到4个范围查找了</span><br><span class="line">第二种： 获得请求参数值</span><br><span class="line">a. $&#123;param.username&#125;</span><br><span class="line">等价于 request.getParameter("username");</span><br><span class="line"></span><br><span class="line">b. $&#123;paramValues.interest&#125;</span><br><span class="line">等价于request.getParameterValues("interest");</span><br><span class="line">第三种： 计算一个表达式，将结果作为标签的属性值或者直接输出</span><br><span class="line">a. 算术运算</span><br><span class="line">“+” , “-” , “*” , “/” , “%” , 但是要注意，“+”号不能连接字符串。</span><br><span class="line">b. 关系运算</span><br><span class="line">"==" , "!=" , "&gt;" , "<span class="tag">&lt;<span class="name">"</span> ,"&gt;</span>=" , "<span class="tag">&lt;<span class="name">="</span></span></span><br><span class="line"><span class="tag">可以使用对应的"<span class="attr">eq</span>","<span class="attr">nq</span>","<span class="attr">lt</span>","<span class="attr">gt</span>","<span class="attr">le</span>","<span class="attr">ge</span>"代替。</span></span><br><span class="line"><span class="tag"><span class="attr">c.</span> 逻辑运算</span></span><br><span class="line"><span class="tag">"&amp;&amp;","||","!",</span></span><br><span class="line"><span class="tag">可以使用"<span class="attr">and</span>","<span class="attr">or</span>","<span class="attr">not</span>"代替。</span></span><br><span class="line"><span class="tag"><span class="attr">d.</span> <span class="attr">empty</span>运算</span></span><br><span class="line"><span class="tag">判断一个字符串是否为空，集合内容是否为空，以及绑订的对象是否存在</span></span><br><span class="line"><span class="tag"></span></span><br><span class="line"><span class="tag"></span></span><br><span class="line"><span class="tag"></span></span><br><span class="line"><span class="tag"></span></span><br><span class="line"><span class="tag"><span class="attr">1.EL</span>内置对象</span></span><br><span class="line"><span class="tag"><span class="attr">pageContext</span>    <span class="attr">--</span>不仅是<span class="attr">EL</span>中的内置对象,也是<span class="attr">jsp</span>的内置对象</span></span><br><span class="line"><span class="tag"><span class="attr">pageScope</span></span></span><br><span class="line"><span class="tag"><span class="attr">rquestScope</span></span></span><br><span class="line"><span class="tag"><span class="attr">sessionScope</span></span></span><br><span class="line"><span class="tag"><span class="attr">applicationScope</span></span></span><br><span class="line"><span class="tag"></span></span><br><span class="line"><span class="tag"><span class="attr">param</span>获取参数的内置对象</span></span><br><span class="line">&lt;%</span><br><span class="line">String name="Tubo";</span><br><span class="line">%&gt;</span><br><span class="line"> $&#123;param['name'] &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">2.jstl技术</span><br><span class="line">jstl的使用:必须导入jar包—-jstl-1.2.jar–才能使用这些标签</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">%@taglib</span> <span class="attr">uri</span>=<span class="string">"http://java.sun.com/jstl/core"</span> <span class="attr">prefix</span>=<span class="string">"c"</span>%&gt;</span></span><br><span class="line">//uri为jar包关联后的以tld结尾的文件中<span class="tag">&lt;<span class="name">uri</span>&gt;</span>这里的内容<span class="tag">&lt;/<span class="name">uri</span>&gt;</span></span><br><span class="line">//prefix为其中<span class="tag">&lt;<span class="name">short-name</span>&gt;</span>这里的内容<span class="tag">&lt;/<span class="name">short-name</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">c:set</span> <span class="attr">var</span>=<span class="string">"保存的变量名"</span> <span class="attr">value</span>=<span class="string">"保存的变量值 "</span> <span class="attr">scope</span>=<span class="string">"保存的域"</span>&gt;</span></span><br><span class="line">page--&gt;page域</span><br><span class="line">request-&gt;request域</span><br><span class="line">session-&gt;session域</span><br><span class="line">application-&gt;application域</span><br><span class="line"><span class="tag">&lt;/<span class="name">c:set</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">c:out</span> <span class="attr">value</span>=<span class="string">"获取值EL表达式"</span> <span class="attr">default</span>=<span class="string">"当后面escapeXml为true时输出的内容"</span></span></span><br><span class="line"><span class="tag"> <span class="attr">escapeXml</span>=<span class="string">"返回值为boolean的表达式"</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;/<span class="name">c:out</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">c:if</span> <span class="attr">test</span>=<span class="string">"返回值为boolea类型的表达式"</span>&gt;</span></span><br><span class="line">//当test中的boolean类型为ture是执行此处的语句或代码</span><br><span class="line"><span class="tag">&lt;/<span class="name">c:if</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">c:choose</span> &gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">c:when</span> <span class="attr">test</span>=<span class="string">"false"</span>&gt;</span></span><br><span class="line">//逻辑代码</span><br><span class="line"><span class="tag">&lt;/<span class="name">c:when</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">c:otherwise</span>&gt;</span></span><br><span class="line">//逻辑代码</span><br><span class="line"><span class="tag">&lt;/<span class="name">c:otherwise</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">c:choose</span>&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">c:forEach</span> <span class="attr">begin</span>=<span class="string">"开始迭代的位置默认为0 可省略"</span> <span class="attr">end</span>=<span class="string">" 结束迭代的位置默认为最后一个 可省略"</span></span></span><br><span class="line"><span class="tag"> <span class="attr">step</span>=<span class="string">"默认迭代步数为1 可省略"</span> <span class="attr">items</span>=<span class="string">"需要遍历的对象"</span> <span class="attr">var</span>=<span class="string">"遍历的名称"</span> &gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">c:forEach</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-        <div class="article-info info-on-right">
-          
-          
 
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/zhifubao.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/weixin.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/11/22/EL-JSTL%E7%AE%80%E5%8D%95%E7%9A%84%E4%BB%8B%E7%BB%8D%E5%8F%8A%E4%BD%BF%E7%94%A8/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/11/22/CSS%E7%9F%A5%E8%AF%86%E7%82%B9/" class="archive-article-date">
-  	<time datetime="2019-11-22T07:18:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-22</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/11/22/CSS%E7%9F%A5%E8%AF%86%E7%82%B9/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">CSS知识点</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/11/22/CSS%E7%9F%A5%E8%AF%86%E7%82%B9/">CSS知识点</a>
-    </h1>
+  <div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="EL-JSTL简单的介绍及使用" data-title="EL+JSTL简单的介绍及使用" data-url="http://yoursite.com/2019/11/22/EL-JSTL%E7%AE%80%E5%8D%95%E7%9A%84%E4%BB%8B%E7%BB%8D%E5%8F%8A%E4%BD%BF%E7%94%A8/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+  
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/11/14/JSP%E5%B8%B8%E7%94%A8%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/" class="archive-article-date">
-  	<time datetime="2019-11-14T08:12:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-14</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/11/14/JSP%E5%B8%B8%E7%94%A8%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/">JSP常用知识点总结</a>
-    </h1>
+  <div id="SOHUCS" sid="EL-JSTL简单的介绍及使用" ></div> 
+<script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js" ></script>
+<script type="text/javascript">
+    window.changyan.api.config({
+        appid: "true",
+        conf: "true"
+    });
+</script>
+</script>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/11/14/Js%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%82%B9/" class="archive-article-date">
-  	<time datetime="2019-11-14T08:04:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-14</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/11/14/Js%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%82%B9/">Js基础知识点</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/11/14/Ajax%E4%BA%94%E4%B8%AA%E8%AF%B7%E6%B1%82%E6%AD%A5%E9%AA%A4/" class="archive-article-date">
-  	<time datetime="2019-11-14T07:48:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-14</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/11/14/Ajax%E4%BA%94%E4%B8%AA%E8%AF%B7%E6%B1%82%E6%AD%A5%E9%AA%A4/">Ajax五个请求步骤</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/11/14/Vue%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%82%B9/" class="archive-article-date">
-  	<time datetime="2019-11-14T07:39:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-14</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/11/14/Vue%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%82%B9/">Vue基础知识点</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/11/05/HTML%E7%BB%93%E6%9E%84%E6%80%A7%E5%AE%9A%E4%B9%89/" class="archive-article-date">
-  	<time datetime="2019-11-05T05:01:08.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-05</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/11/05/HTML%E7%BB%93%E6%9E%84%E6%80%A7%E5%AE%9A%E4%B9%89/">HTML结构性定义</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/31/java%E5%85%B3%E9%94%AE%E5%AD%97/" class="archive-article-date">
-  	<time datetime="2019-10-31T12:04:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-31</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/31/java%E5%85%B3%E9%94%AE%E5%AD%97/">java关键字</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/31/Java%E6%8E%A5%E5%8F%A3%E6%80%BB%E7%BB%93/" class="archive-article-date">
-  	<time datetime="2019-10-31T11:30:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-31</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/31/Java%E6%8E%A5%E5%8F%A3%E6%80%BB%E7%BB%93/">Java接口总结</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/31/Github%E4%B8%AA%E4%BA%BA%E6%8A%80%E6%9C%AF%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%AD%A5%E9%AA%A4/" class="archive-article-date">
-  	<time datetime="2019-10-31T06:34:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-31</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/31/Github%E4%B8%AA%E4%BA%BA%E6%8A%80%E6%9C%AF%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%AD%A5%E9%AA%A4/">Github个人技术博客搭建步骤</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/31/Mysql%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%82%B9/" class="archive-article-date">
-  	<time datetime="2019-10-31T04:32:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-31</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/31/Mysql%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%82%B9/">Mysql基础知识点</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/31/Java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" class="archive-article-date">
-  	<time datetime="2019-10-31T04:03:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-31</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/31/Java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/">post title with whitespace</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -516,8 +370,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

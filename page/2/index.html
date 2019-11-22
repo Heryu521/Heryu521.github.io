@@ -155,6 +155,255 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Mysql基础知识点" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/10/31/Mysql%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%82%B9/">Mysql基础知识点</a>
+    </h1>
+  
+
+        
+        <a href="/2019/10/31/Mysql%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%82%B9/" class="archive-article-date">
+  	<time datetime="2019-10-31T04:32:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-31</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Mysql基础知识点总结"><a href="#Mysql基础知识点总结" class="headerlink" title="Mysql基础知识点总结"></a>Mysql基础知识点总结</h1><p><a href="https://www.cnblogs.com/immkoy/p/9822303.html" target="_blank" rel="noopener">Mysql数据库知识点总结</a>     </p>
+<ul>
+<li><p>一、基本概念</p>
+<p>1、数据库服务器</p>
+<p>我们可以理解为数据库服务器即是一台内存较高的计算机，可以在上面运行数据库管理软件</p>
+<p>2、数据库管理系统</p>
+<p>如Mysql,是一个软件，用来管理数据库的软件</p>
+<p>3、数据库</p>
+<p>即文件夹，用来组织文件</p>
+<p>4、表</p>
+<p>即文件，用来存放多条记录，每条记录为多个字段组成的一行数据</p>
+</li>
+<li><p>二、Mysql基本介绍</p>
+<ul>
+<li>Mysql是目前WEB应用最好的RDBMS（Relation Database Mangement System)关系数据库管理系统之一<ul>
+<li>关系型数据库是将数据保存到不同的表里面，而不是将数据放到一个大仓库内</li>
+<li>关系型数据库与非关系型数据库的区别是：关系型数据库有表结构，非关系型数据库是通过key-value存储，无表结构</li>
+<li>Mysql使用的是标准的SQL数据语言形式，支持多种语言，支持5000万条的数据仓库，32位系统表文件最大支持4GB，64位系统最大支持表文件为8TB</li>
+<li>通俗的讲：Mysql就是一个基于socket编写的C/S架构的软件</li>
+<li>储存引擎<ul>
+<li>mysql默认的查询引擎为innodb，可以自行进行更改</li>
+</ul>
+</li>
+<li>语法：<ul>
+<li>win：<ul>
+<li>启动mysql服务端，在cmd窗口运行mysqld</li>
+<li>数据库初始化命令：mysql-initialize-insecure</li>
+<li>启动mysql客户端，并连接服务端mysql -uroot -p</li>
+<li>连接其他ip数据库,mysql -u账号 -hIP地址 -P端口号 -p密码</li>
+<li>查看当前登陆用户：select user( )</li>
+<li>刷新权限，执行命令:flush privileges;</li>
+<li>查看进程：tasklist | findstr mysql</li>
+<li>杀死进程：tasklist /F /PID 进程号</li>
+</ul>
+</li>
+<li>mac：<ul>
+<li>设置新密码：set password for ‘用户名‘@’IP地址’=password(‘’);</li>
+<li>查看系统进程:ps -A</li>
+<li>杀死系统进程：sudo kill -9 PID</li>
+</ul>
+</li>
+<li>操作文件夹（库）:<ul>
+<li>增加一个库：create database db1 charset utf8;</li>
+<li>查看所有库: show databases;</li>
+<li>查看特定库: show create database db1;</li>
+<li>删库跑路: drop database db1;</li>
+</ul>
+</li>
+<li>操作文件（表）：<ul>
+<li>切换进数据库：use db1;</li>
+<li>查看当前所在文件夹；select database( );</li>
+<li>增加表：create table t1(id int,name char(6));</li>
+<li>查看特定表：show create table t1;</li>
+<li>查看所有表：show tables;或者desc t1;</li>
+<li>改：<ul>
+<li>alter table t1 modify name char(10);name字段改为10字节；</li>
+<li>alter table t1 modify name NAME char(10）;name字段名改成NAME</li>
+</ul>
+</li>
+<li>复制表<ul>
+<li>即复制表数据也复制表结构：create table t1 select * from db1.t1;</li>
+<li>只复制表结构create table a1 like db1.t1;</li>
+</ul>
+</li>
+<li>清空表<ul>
+<li>delete from t1;但是这种方法会保留自增的ID</li>
+<li>truncate table t1;这种方法不会保留自增ID</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>操作文件内容<ul>
+<li>增加内容：insert into (id,name) values(1,’aa’),(2,’bb’),(3,’cc’);</li>
+<li>查看内容：select * from db1.t1;</li>
+<li>删除内容：delete from t1 where id =1;</li>
+<li>查看用户权限：select * from mysql.user where user=’root’\G;</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>三、SQL数据类型</p>
+<p>1.SQL之中没有bool值,tinyint[1]表示true;tinyint[0]表示fasle.</p>
+<p>2.int数据类型后面存储的是显示宽度，而不是存储宽度，其他的数据类型则表示的是存储宽度</p>
+<p>3.now（）sql中的内置函数，根据数据类型生成相对应的时间模式</p>
+<p>4.char( )定长字符串，存储速度快，但是浪费空间</p>
+<p>5.varchar（ ）变长字符串，存储速度慢，可是节省空间</p>
+<p>6.enum() 表示枚举 多选一</p>
+<p>7.set（ ）表示集合 多选多</p>
+</li>
+<li><p>四、约束：作用是保证数据的完整性和一致性</p>
+<p>1.not null 表示该字段数据不能为空</p>
+<p>2.default 表示该字段的默认值</p>
+<p>3.unique 唯一（列唯一，组合唯一）</p>
+<p>4.primary key 主键 一张列表中只允许出现一个主键（not null + unique）</p>
+<p>5.auto-increment 自增长</p>
+<p>6.foregin key 外键 建立两个表之间的联系</p>
+<p>7.语法 constraint fk_dep foreign key(关联列名) references 被关联表（被关联列）</p>
+<p>8.on delete cascade 同步删除</p>
+<p>9.on update cascade 同步更新</p>
+</li>
+<li><p>五、查询：</p>
+<ul>
+<li>单表查询的关键字执行顺序<ul>
+<li>from 说明是来自那一张表</li>
+<li>where 条件 后面可以跟比较运算符 between and in(. ). like（%表示任意字符 _表示一个字符）逻辑运算符 </li>
+<li>group by 以某个字段的值进行分组，发生在where之后，查看组类信息依赖于聚合函数max min avg sum count</li>
+<li>having 过滤，在group by 后面的条件筛选</li>
+<li>order by 排序 asc升序 desc降序</li>
+<li>limite 限制查询 记录数 limte a, b. a表示从第a个开始，b表示查询b条</li>
+</ul>
+</li>
+<li>多表连接查询<ul>
+<li>语法：select 字段 from t1 inner/left/right join t2 on t1.字段=t2.字段；<ul>
+<li>inner 表示只显示连接匹配的行</li>
+<li>left：优先显示左表的全部记录</li>
+<li>right：优先显示右表的全部记录</li>
+</ul>
+</li>
+<li>子查询中的关键字<ul>
+<li>in/not in：查询的结果是否在子表中</li>
+<li>运算符：= &lt; &gt; !=</li>
+<li>exits:表示存在，使用此关键字时，内层查询语句不返回查询的记录，而是返回一个布尔值，当此布尔值为真时外层语句进查询，反之不进行查询</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>六、pymysql简单使用</p>
+<p>1.连接：conn=pymysql.connect(host=’IP’,port=端口号,user=’root’,password=’’,db=db1,charset=’utf8’)</p>
+<p>2.创建游标：cursor=conn.cursor( )</p>
+<p>3.写sql语句：sql=‘’</p>
+<p>4.执行sql语句，返回在数据库中查询成功的记录行数，result=cursor.execute(sql);在result中可以进行字符的拼接，execute（sql,[user,pwd]),即execute注入，防治恶意语法</p>
+<p>5.使用mysql模块进行增删改操作时需使用commit( )方法进行提交，否则数据库更改不生效;conn.commit( )</p>
+<p>6.查询操作：fetchone( )获取下一行数据，从第一行开始；fetchall( )获取所有行数据，;fetchany(n)，获取n行数据</p>
+<p>7.查询操作默认返回的是元组，使用如下语句获取游标，改变cursor属性，会返回字典：cursor=conn.cursor(cursor=pymysql.cursors.DictCursor)</p>
+<p>8.移动指针：</p>
+<ul>
+<li><p>cursor.scroll(1,mode=’relative’)相对定位，相对当前位置向下移动</p>
+</li>
+<li><p>cursor.scroll(1,mode=’abusolute’绝对定位，相对左上角向下移动</p>
+</li>
+<li><p>关闭连接，游标和连接都需要关闭：cursor.close( ). conn.close( )</p>
+</li>
+</ul>
+</li>
+<li><p>七、索引</p>
+<ul>
+<li>索引的作用：约束和加速查找<ul>
+<li>无索引的时候一般会 从前至后一条条查找</li>
+<li>有索引的时候：创建索引的本质就是创造额外的文件，查询时先去额外的文件找，定好位置，再去原始表直接查询，提高查询速度，但是增删改的速度依然慢，创建索引后必须命中索引才有效</li>
+</ul>
+</li>
+<li>索引的分类<ul>
+<li>1、普通索引：加速查询<ul>
+<li>加入索引：create index 索引名 on 表名(列名）</li>
+<li>删除索引: drop index 索引名 on 表名</li>
+<li>查看索引:show index from 表名</li>
+</ul>
+</li>
+<li>2、唯一索引：加速查找和唯一约束（可含null）<ul>
+<li>加入索引：create unique index 索引名 on 表名（列名）</li>
+<li>删除：drop index 索引名 on 表名</li>
+</ul>
+</li>
+<li>3、主键索引<ul>
+<li>加入索引:alter table 表名 add primary key(列名）</li>
+<li>删除索引：alter table 表名 drop primary key（列名）和alter table 表名 modify 列名 int,drop primary key</li>
+</ul>
+</li>
+<li>4、组合索引：将多个列组合成一个索引<ul>
+<li>创建组合索引：create iindex 索引名 on 表名（列1，列2）</li>
+<li>在使用组合索引时，若组合索引为(name,email),单独索引email时不走索引，这称为最左前缀匹配原则，最左匹配原则中，mysql会一直向右匹配知道遇到（&lt; &gt; between like)这一类的范围查询时停止</li>
+</ul>
+</li>
+<li>explain + sql查询语句，用于查询sql执行信息参数</li>
+<li>在使用关键字‘like’查询时：like ‘n%’ 走索引；但是like ‘%n%’不走索引，即有且仅只有后面带上%时走索引</li>
+<li>使用函数时索引不生效</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/10/31/Mysql%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%82%B9/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Java面向对象" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
